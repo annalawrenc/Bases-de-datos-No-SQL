@@ -133,7 +133,7 @@ Si el investigador es director, en este caso la información adicional dará detal
 
 El siguiente esquema refleja el **diseño en forma gráfica:**
  
-![Doctorados] (https://github.com/annalawrenc/Mongo/blob/master/screens/DisenoMongoTesis.jpg?)
+![Doctorados] (https://github.com/annalawrenc/Mongo/blob/master/DisenoMongoTesis2.jpg)
 
 **Implementación**
 
