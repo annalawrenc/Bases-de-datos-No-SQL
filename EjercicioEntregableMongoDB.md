@@ -164,8 +164,8 @@ En este caso el investigaror es autor de a tesis y aporto información adicional 
 	nombre:"Mario", 
 	apellidos: "Lopez",
 	rol: {autor_director:"autor", institucion_investigador: "Universidad de Alcalá", fecha_rol: new Date ("2013, 10, 2") },
-	tesis: {titulo:"Elaboración de helados de fresa", etiqueta_un:"alimentación", 
-	director:{nombre: "Hugo",apellidos: "Martinez"},institucion_tesis: "Universidad de Alcalá"}
+	tesis: {titulo:"Elaboración de helados de fresa", etiqueta_un:"alimentación",
+	director:{nombre: "Hugo",apellidos: "Martinez"},institucion_tesis: "Universidad de Alcalá", fecha_tesis: new Date ("2013, 10, 2")}
 	})
 
 	WriteResult({ "nInserted" : 1 })
@@ -178,7 +178,7 @@ En este caso el investigaror es director y aporto información adicional sobre el
 	apellidos: "Martinez",
 	rol: {autor_director:"director", institucion_investigador: "Universidad Complutense", fecha_rol: new Date ("2013, 10, 2") },
 	tesis: {titulo:"Elaboración de helados de fresa", etiqueta_un:"alimentación", 
-	autor:{nombre: "Mario",apellidos: "Lopez"},institucion_tesis: "Universidad de Alcalá"}
+	autor:{nombre: "Mario",apellidos: "Lopez"},institucion_tesis: "Universidad de Alcalá",fecha_tesis: new Date ("2013, 10, 2")}
 	})
 
 	WriteResult({ "nInserted" : 1 })
@@ -224,7 +224,8 @@ Compruebo si las inserciones han sido correctas:
 				"nombre" : "Hugo",
 				"apellidos" : "Martinez"
 			},
-			"institucion_tesis" : "Universidad de Alcalá"
+			"institucion_tesis" : "Universidad de Alcalá",
+			"fecha_tesis" : ISODate("2013-10-01T22:00:00Z")
 		}
 	}
 
@@ -245,7 +246,8 @@ Compruebo si las inserciones han sido correctas:
 				"nombre" : "Mario",
 				"apellidos" : "Lopez"
 			},
-			"institucion_tesis" : "Universidad de Alcalá"
+			"institucion_tesis" : "Universidad de Alcalá",
+			"fecha_tesis" : ISODate("2013-10-01T22:00:00Z")
 		}
 	}
 
@@ -291,6 +293,6 @@ Para las búsquedas por autor aplico un índice compuesto de nombre y apellidos.
 
 **Distribución de los datos**
 
-Dado que las consultas se harían siempre sobre periodos de tiempo, la distribución más eficiente sería sharding basado en rangos.
+Dado que las consultas se harían siempre sobre periodos de tiempo, la distribución más eficiente sería sharding basado en rangos, usando shard key de la fecha de la tesis.
 
 
