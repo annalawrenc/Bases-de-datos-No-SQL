@@ -133,7 +133,7 @@ Si el investigador es director, en este caso la información adicional dará detal
 
 El siguiente esquema refleja el **diseño en forma gráfica:**
  
-![Doctorados] (https://github.com/annalawrenc/Mongo/blob/master/DisenoMongoTesis2.jpg)
+![Doctorados] (https://github.com/annalawrenc/Mongo/blob/master/DisenoMongoTesis.jpg)
 
 **Implementación**
 
@@ -202,8 +202,10 @@ Compruebo si las inserciones han sido correctas:
 			"clave_un_6dig" : "123456",
 			"etiqueta_un" : "alimentación"
 		},
-		"fecha_tesis" : ISODate("2013-10-01T22:00:00Z"),
-		"institucion_tesis" : "Universidad de Alcalá"
+			"fecha_tesis" : ISODate("2013-10-01T22:00:00Z"),
+			"institucion_tesis" : "Universidad de Alcalá"	
+
+		
 	}
 
 
@@ -224,8 +226,9 @@ Compruebo si las inserciones han sido correctas:
 				"nombre" : "Hugo",
 				"apellidos" : "Martinez"
 			},
-			"institucion_tesis" : "Universidad de Alcalá",
+			"institucion_tesis" : "Universidad de Alcalá",		
 			"fecha_tesis" : ISODate("2013-10-01T22:00:00Z")
+			
 		}
 	}
 
